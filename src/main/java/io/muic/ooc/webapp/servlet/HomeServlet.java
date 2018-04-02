@@ -50,6 +50,7 @@ public class HomeServlet extends HttpServlet implements Routable {
                 String username = (String) request.getSession().getAttribute("username");
                 try {
                     new ConnectionManager().updateColumn(username,"status","logout");
+                    request.setAttribute("username", null);
                     response.sendRedirect("/login");
                 } catch (SQLException e) {
                     e.printStackTrace();
