@@ -19,9 +19,9 @@ public class ConnectionManager {
     private Connection connection;
     private Statement statement;
     public ResultSet resultSet;
-    private String databaseURL = "jdbc:mysql://localhost:3306/LoginDB";
+    private String databaseURL = "jdbc:mysql://localhost:3306/LoginCloudDB";
     private String databaseUsername = "root";
-    private String databasePassword = "Login123";
+    private String databasePassword = "8433";
     public ConnectionManager() {
         connection = connectToDB();
     }
